@@ -1,6 +1,11 @@
 Changes
 =======
 
+V401.1.0
+---------
+1. Moodle 4.1 version.
+2. Add COPYING.txt.
+
 V3.11.1.0
 ---------
 1. Moodle 3.11 version.
