@@ -26,11 +26,13 @@
  *
  * @package    mod_simplemod
  * @copyright  2019 Richard Jones richardnz@outlook.com
+ * @copyright  2022 G J Barnard - {@link http://moodle.org/user/profile.php?id=442195}.
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  * @see https://github.com/moodlehq/moodle-mod_simplemod
- * @see https://github.com/justinhunt/moodle-mod_simplemod */
-
-defined('MOODLE_INTERNAL') || die();
+ * @see https://github.com/justinhunt/moodle-mod_simplemod
+ * @see https://github.com/richardjonesnz/moodle-mod_simplemod
+ * @see https://github.com/gjb2048/moodle-mod_simplemod
+ */
 
 /* Moodle core API */
 
@@ -125,11 +127,21 @@ function simplemod_refresh_events($courseid = 0) {
     }
 
     foreach ($simplemods as $simplemod) {
-        // Create a function such as the one below to deal with updating calendar events.
-        // simplemod_update_events($simplemod);
+        simplemod_update_events($simplemod);
     }
 
     return true;
+}
+
+/**
+ * This function updates the events associated to the simplemod.
+ * If $override is non-zero, then it updates only the events
+ * associated with the specified override.
+ *
+ * @param simplemod $simplemod the simplemod object.
+ * @param object $override (optional) limit to a specific override
+ */
+function simplemod_update_events($simplemod, $override = null) {
 }
 
 /**
@@ -275,7 +287,7 @@ function simplemod_get_extra_capabilities() {
  */
 function simplemod_scale_used($simplemodid, $scaleid) {
     global $DB;
-    if ($scaleid and $DB->record_exists('simplemod', array('id' => $simplemodid, 'grade' => -$scaleid))) {
+    if ($scaleid && $DB->record_exists('simplemod', array('id' => $simplemodid, 'grade' => -$scaleid))) {
         return true;
     } else {
         return false;
@@ -291,7 +303,7 @@ function simplemod_scale_used($simplemodid, $scaleid) {
  */
 function simplemod_scale_used_anywhere($scaleid) {
     global $DB;
-    if ($scaleid and $DB->record_exists('simplemod', array('grade' => -$scaleid))) {
+    if ($scaleid && $DB->record_exists('simplemod', array('grade' => -$scaleid))) {
         return true;
     } else {
         return false;

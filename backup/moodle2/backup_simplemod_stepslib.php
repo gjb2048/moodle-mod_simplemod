@@ -23,8 +23,6 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die;
-
 /**
  * Define the complete simplemod structure for backup, with file and id annotations.
  *
@@ -49,7 +47,7 @@ class backup_simplemod_activity_structure_step extends backup_activity_structure
 
         // Define the root element describing the simplemod instance.
         $simplemod = new backup_nested_element('simplemod',
-            array('id'), 
+            array('id'),
             array(
                 'course', 'name', 'intro',
                 'introformat', 'title', 'timecreated',
