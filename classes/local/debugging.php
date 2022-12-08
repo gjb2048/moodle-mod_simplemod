@@ -26,8 +26,6 @@
 
 namespace mod_simplemod\local;
 
-defined('MOODLE_INTERNAL') || die();
-
 class debugging {
     public static function logit($message, $value) {
         error_log(print_r($message, true));
