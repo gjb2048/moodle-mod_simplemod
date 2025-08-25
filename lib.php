@@ -123,7 +123,7 @@ function simplemod_refresh_events($courseid = 0) {
             return true;
         }
     } else {
-        if (!$simplemods = $DB->get_records('simplemod', array('course' => $courseid))) {
+        if (!$simplemods = $DB->get_records('simplemod', ['course' => $courseid])) {
             return true;
         }
     }
@@ -159,12 +159,12 @@ function simplemod_update_events($simplemod, $override = null) {
 function simplemod_delete_instance($id) {
     global $DB;
 
-    if (! $simplemod = $DB->get_record('simplemod', array('id' => $id))) {
+    if (! $simplemod = $DB->get_record('simplemod', ['id' => $id])) {
         return false;
     }
 
     // Delete any dependent records here.
-    $DB->delete_records('simplemod', array('id' => $simplemod->id));
+    $DB->delete_records('simplemod', ['id' => $simplemod->id]);
 
     return true;
 }
@@ -273,7 +273,7 @@ function simplemod_cron () {
  * @return array
  */
 function simplemod_get_extra_capabilities() {
-    return array();
+    return [];
 }
 
 /* Gradebook API */
@@ -289,7 +289,7 @@ function simplemod_get_extra_capabilities() {
  */
 function simplemod_scale_used($simplemodid, $scaleid) {
     global $DB;
-    if ($scaleid && $DB->record_exists('simplemod', array('id' => $simplemodid, 'grade' => -$scaleid))) {
+    if ($scaleid && $DB->record_exists('simplemod', ['id' => $simplemodid, 'grade' => -$scaleid])) {
         return true;
     } else {
         return false;
@@ -305,7 +305,7 @@ function simplemod_scale_used($simplemodid, $scaleid) {
  */
 function simplemod_scale_used_anywhere($scaleid) {
     global $DB;
-    if ($scaleid && $DB->record_exists('simplemod', array('grade' => -$scaleid))) {
+    if ($scaleid && $DB->record_exists('simplemod', ['grade' => -$scaleid])) {
         return true;
     } else {
         return false;
@@ -322,7 +322,7 @@ function simplemod_scale_used_anywhere($scaleid) {
 function simplemod_grade_item_update(stdClass $simplemod) {
     global $CFG;
     require_once($CFG->libdir.'/gradelib.php');
-    $item = array();
+    $item = [];
     $item['itemname'] = clean_param($simplemod->name, PARAM_NOTAGS);
     $item['gradetype'] = GRADE_TYPE_VALUE;
     if ($simplemod->grade > 0) {
@@ -349,7 +349,7 @@ function simplemod_grade_item_delete($simplemod) {
     global $CFG;
     require_once($CFG->libdir.'/gradelib.php');
     return grade_update('mod/simplemod', $simplemod->course, 'mod', 'simplemod',
-            $simplemod->id, 0, null, array('deleted' => 1));
+            $simplemod->id, 0, null, ['deleted' => 1]);
 }
 /**
  * Update simplemod grades in the gradebook
@@ -363,7 +363,7 @@ function simplemod_update_grades(stdClass $simplemod, $userid = 0) {
     global $CFG, $DB;
     require_once($CFG->libdir.'/gradelib.php');
     // Populate array of grade objects indexed by userid.
-    $grades = array();
+    $grades = [];
     grade_update('mod/simplemod', $simplemod->course, 'mod', 'simplemod', $simplemod->id, 0, $grades);
 }
 
@@ -381,7 +381,7 @@ function simplemod_update_grades(stdClass $simplemod, $userid = 0) {
  * @return array of [(string)filearea] => (string)description
  */
 function simplemod_get_file_areas($course, $cm, $context) {
-    return array();
+    return [];
 }
 
 /**
@@ -419,7 +419,7 @@ function simplemod_get_file_info($browser, $areas, $course, $cm, $context, $file
  * @param bool $forcedownload whether or not force download
  * @param array $options additional options affecting the file serving
  */
-function simplemod_pluginfile($course, $cm, $context, $filearea, array $args, $forcedownload, array $options=array()) {
+function simplemod_pluginfile($course, $cm, $context, $filearea, array $args, $forcedownload, array $options=[]) {
     global $DB, $CFG;
 
     if ($context->contextlevel != CONTEXT_MODULE) {

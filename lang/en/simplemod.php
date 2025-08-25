@@ -14,7 +14,6 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-
 /**
  * English strings for simplemod
  *
@@ -31,18 +30,18 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['modulename'] = 'Simplemod';
-$string['modulenameplural'] = 'Simplemods';
 $string['modulename_help'] = 'Use the simplemod module for... | The simplemod module allows...';
+$string['modulenameplural'] = 'Simplemods';
+$string['nosimplemods'] = 'No instances';
+$string['pluginadministration'] = 'Simplemod administration';
+$string['pluginname'] = 'Simplemod';
+$string['simplemod'] = 'Simplemod';
 $string['simplemod:addinstance'] = 'Add a new Simplemod';
 $string['simplemod:submit'] = 'Submit Simplemod';
 $string['simplemod:view'] = 'View Simplemod';
 $string['simplemodfieldset'] = 'Custom example fieldset';
 $string['simplemodname'] = 'Name';
 $string['simplemodname_help'] = 'This is the content of the help tooltip associated with the simplemodname field.  Markdown syntax is supported.';
-$string['simplemod'] = 'Simplemod';
-$string['pluginadministration'] = 'Simplemod administration';
-$string['pluginname'] = 'Simplemod';
-$string['nosimplemods'] = 'No instances';
 
 // Mod form specific simplemod settings.
 $string['title'] = 'Activity title';

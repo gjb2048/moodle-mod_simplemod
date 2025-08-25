@@ -17,7 +17,7 @@
 /**
  * Simple debugging class
  *
- * @package    mod_simplemod.
+ * @package    mod_simplemod
  * @copyright  2019 Richard Jones richardnz@outlook.com
  * @copyright  2021 G J Barnard.
  * @author     G J Barnard - {@link http://moodle.org/user/profile.php?id=442195}.

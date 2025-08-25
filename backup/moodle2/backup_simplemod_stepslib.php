@@ -47,18 +47,18 @@ class backup_simplemod_activity_structure_step extends backup_activity_structure
 
         // Define the root element describing the simplemod instance.
         $simplemod = new backup_nested_element('simplemod',
-            array('id'),
-            array(
+            ['id'],
+            [
                 'course', 'name', 'intro',
                 'introformat', 'title', 'timecreated',
-                'timemodified'
-            )
+                'timemodified',
+            ]
         );
 
         // If we had more elements, we would build the tree here.
 
         // Define data sources.
-        $simplemod->set_source_table('simplemod', array('id' => backup::VAR_ACTIVITYID));
+        $simplemod->set_source_table('simplemod', ['id' => backup::VAR_ACTIVITYID]);
 
         /* If we were referring to other tables, we would annotate the relation
            with the element's annotate_ids() method. */

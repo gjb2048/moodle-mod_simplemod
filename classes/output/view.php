@@ -38,12 +38,19 @@ use stdClass;
  * @param int id - course module id.
  * @copyright  2020 Richard Jones <richardnz@outlook.com>
  */
-
 class view implements renderable, templatable {
 
+    /** @var $simplemod */
     protected $simplemod;
+    /** @var $id */
     protected $id;
 
+    /**
+     * Constructor.
+     *
+     * @param object simplemod - instance of simplemod.
+     * @param int id - course module id.
+     */
     public function __construct($simplemod, $id) {
         $this->simplemod = $simplemod;
         $this->id = $id;

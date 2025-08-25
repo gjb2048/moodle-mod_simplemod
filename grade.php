@@ -25,6 +25,7 @@
  * @see https://github.com/justinhunt/moodle-mod_simplemod
  * @see https://github.com/gjb2048/moodle-mod_simplemod
  */
+
 require('../../config.php');
 $id = required_param('id', PARAM_INT);// Course module ID.
 

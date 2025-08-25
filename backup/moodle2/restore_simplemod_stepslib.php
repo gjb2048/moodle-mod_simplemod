@@ -42,7 +42,7 @@ class restore_simplemod_activity_structure_step extends restore_activity_structu
      */
     protected function define_structure() {
 
-        $paths = array();
+        $paths = [];
         $paths[] = new restore_path_element('simplemod', '/activity/simplemod');
 
         // Return the paths wrapped into standard activity structure.

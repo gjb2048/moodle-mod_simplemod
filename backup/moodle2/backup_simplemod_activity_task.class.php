@@ -37,7 +37,8 @@ require_once($CFG->dirroot.'/mod/simplemod/backup/moodle2/backup_simplemod_setti
  * @copyright 2019 Richard Jones richardnz@outlook.com
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  * @see https://github.com/moodlehq/moodle-mod_simplemod
- * @see https://github.com/justinhunt/moodle-mod_simplemod */
+ * @see https://github.com/justinhunt/moodle-mod_simplemod
+ */
 class backup_simplemod_activity_task extends backup_activity_task {
 
     /**

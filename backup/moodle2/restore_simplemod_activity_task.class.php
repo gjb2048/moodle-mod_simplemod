@@ -61,9 +61,9 @@ class restore_simplemod_activity_task extends restore_activity_task {
      * processed by the link decoder
      */
     public static function define_decode_contents() {
-        $contents = array();
+        $contents = [];
 
-        $contents[] = new restore_decode_content('simplemod', array('intro'), 'simplemod');
+        $contents[] = new restore_decode_content('simplemod', ['intro'], 'simplemod');
 
         return $contents;
     }
@@ -73,7 +73,7 @@ class restore_simplemod_activity_task extends restore_activity_task {
      * to the activity to be executed by the link decoder
      */
     public static function define_decode_rules() {
-        $rules = array();
+        $rules = [];
 
         $rules[] = new restore_decode_rule('SIMPLEMODVIEWBYID', '/mod/simplemod/view.php?id=$1', 'course_module');
         $rules[] = new restore_decode_rule('SIMPLEMODINDEX', '/mod/simplemod/index.php?id=$1', 'course');
@@ -89,7 +89,7 @@ class restore_simplemod_activity_task extends restore_activity_task {
      * of {@link restore_log_rule} objects
      */
     public static function define_restore_log_rules() {
-        $rules = array();
+        $rules = [];
 
         $rules[] = new restore_log_rule('simplemod', 'add', 'view.php?id={course_module}', '{simplemod}');
         $rules[] = new restore_log_rule('simplemod', 'update', 'view.php?id={course_module}', '{simplemod}');
@@ -109,7 +109,7 @@ class restore_simplemod_activity_task extends restore_activity_task {
      * activity level. All them are rules not linked to any module instance (cmid = 0)
      */
     public static function define_restore_log_rules_for_course() {
-        $rules = array();
+        $rules = [];
 
         // Fix old wrong uses (missing extension).
         $rules[] = new restore_log_rule('simplemod', 'view all', 'index?id={course}', null,

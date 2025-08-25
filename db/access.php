@@ -49,23 +49,23 @@
 defined('MOODLE_INTERNAL') || die();
 
 // Modify capabilities as needed and remove this comment.
-$capabilities = array(
-    'mod/simplemod:addinstance' => array(
+$capabilities = [
+    'mod/simplemod:addinstance' => [
         'riskbitmask' => RISK_XSS,
         'captype' => 'write',
         'contextlevel' => CONTEXT_COURSE,
-        'archetypes' => array(
+        'archetypes' => [
             'editingteacher' => CAP_ALLOW,
-            'manager' => CAP_ALLOW
-        ),
-        'clonepermissionsfrom' => 'moodle/course:manageactivities'
-    ),
-    'mod/simplemod:view' => array(
+            'manager' => CAP_ALLOW,
+        ],
+        'clonepermissionsfrom' => 'moodle/course:manageactivities',
+    ],
+    'mod/simplemod:view' => [
         'captype' => 'read',
         'contextlevel' => CONTEXT_MODULE,
-        'archetypes' => array(
+        'archetypes' => [
             'guest' => CAP_ALLOW,
             'user' => CAP_ALLOW,
-        )
-    )
-);
+        ],
+    ],
+];
