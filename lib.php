@@ -74,7 +74,7 @@ function simplemod_supports($feature) {
  * @param mod_simplemod_mod_form $mform The form instance itself (if needed)
  * @return int The id of the newly inserted simplemod record
  */
-function simplemod_add_instance(stdClass $simplemod, mod_simplemod_mod_form $mform = null) {
+function simplemod_add_instance(stdClass $simplemod, ?mod_simplemod_mod_form $mform = null) {
     global $DB;
 
     $simplemod->timecreated = time();
@@ -94,7 +94,7 @@ function simplemod_add_instance(stdClass $simplemod, mod_simplemod_mod_form $mfo
  * @param mod_simplemod_mod_form $mform The form instance itself (if needed)
  * @return boolean Success/Fail
  */
-function simplemod_update_instance(stdClass $simplemod, mod_simplemod_mod_form $mform = null) {
+function simplemod_update_instance(stdClass $simplemod, ?mod_simplemod_mod_form $mform = null) {
     global $DB;
 
     $simplemod->timemodified = time();
@@ -456,6 +456,6 @@ function simplemod_extend_navigation(navigation_node $navref, stdClass $course, 
  * @param settings_navigation $settingsnav complete settings navigation tree
  * @param navigation_node $simplemodnode simplemod administration node
  */
-function simplemod_extend_settings_navigation(settings_navigation $settingsnav, navigation_node $simplemodnode=null) {
+function simplemod_extend_settings_navigation(settings_navigation $settingsnav, ?navigation_node $simplemodnode=null) {
     // Todo: Delete this function and its docblock, or implement it.
 }
