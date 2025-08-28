@@ -444,7 +444,7 @@ function simplemod_pluginfile($course, $cm, $context, $filearea, array $args, $f
  * @param cm_info $cm course module information
  */
 function simplemod_extend_navigation(navigation_node $navref, stdClass $course, stdClass $module, cm_info $cm) {
-    // TODO Delete this function and its docblock, or implement it.
+    // Todo: Delete this function and its docblock, or implement it.
 }
 
 /**
@@ -457,5 +457,5 @@ function simplemod_extend_navigation(navigation_node $navref, stdClass $course, 
  * @param navigation_node $simplemodnode simplemod administration node
  */
 function simplemod_extend_settings_navigation(settings_navigation $settingsnav, navigation_node $simplemodnode=null) {
-    // TODO Delete this function and its docblock, or implement it.
+    // Todo: Delete this function and its docblock, or implement it.
 }

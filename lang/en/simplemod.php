@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * English strings for simplemod
+ * English strings for simplemod.
  *
  * You can have a rather longer description of the file as well,
  * if you like, and it can span multiple lines.
@@ -30,7 +30,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['modulename'] = 'Simplemod';
-$string['modulename_help'] = 'Use the simplemod module for... | The simplemod module allows...';
+$string['modulename_help'] = 'Use the simplemod module for learning about modules.';
 $string['modulenameplural'] = 'Simplemods';
 $string['nosimplemods'] = 'No instances';
 $string['pluginadministration'] = 'Simplemod administration';

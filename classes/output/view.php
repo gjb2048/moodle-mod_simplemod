@@ -15,13 +15,14 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Prints a particular instance of simplemod
+ * Prints a particular instance of simplemod.
  *
  * @package    mod_simplemod
  * @copyright  202 Richard Jones richardnz@outlook.com
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- * @see https://github.com/moodlehq/moodle-mod_simplemod
- * @see https://github.com/justinhunt/moodle-mod_simplemod
+ * @see        https://github.com/moodlehq/moodle-mod_simplemod
+ * @see        https://github.com/justinhunt/moodle-mod_simplemod
+ * @see        https://github.com/gjb2048/moodle-mod_simplemod
  */
 
 namespace mod_simplemod\output;
@@ -32,7 +33,7 @@ use templatable;
 use stdClass;
 
 /**
- * Simplemod: Create a new view page renderable object
+ * Simplemod: Create a new view page renderable object.
  *
  * @param object simplemod - instance of simplemod.
  * @param int id - course module id.

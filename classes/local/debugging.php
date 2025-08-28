@@ -26,7 +26,16 @@
 
 namespace mod_simplemod\local;
 
+/**
+ * Debugging class.
+ */
 class debugging {
+    /**
+     * Log it.
+     *
+     * @param string $message
+     * @param any $value
+     */
     public static function logit($message, $value) {
         error_log(print_r($message, true));
         error_log(print_r($value, true));

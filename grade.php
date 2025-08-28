@@ -21,12 +21,12 @@
  * @copyright  2019 Richard Jones richardnz@outlook.com
  * @copyright  2022 G J Barnard - {@link http://moodle.org/user/profile.php?id=442195}.
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- * @see https://github.com/moodlehq/moodle-mod_simplemod
- * @see https://github.com/justinhunt/moodle-mod_simplemod
- * @see https://github.com/gjb2048/moodle-mod_simplemod
+ * @see        https://github.com/moodlehq/moodle-mod_simplemod
+ * @see        https://github.com/justinhunt/moodle-mod_simplemod
+ * @see        https://github.com/gjb2048/moodle-mod_simplemod
  */
 
-require('../../config.php');
+require_once('../../config.php');
 $id = required_param('id', PARAM_INT);// Course module ID.
 
 // Item number may be != 0 for activities that allow more than one grade per user.
