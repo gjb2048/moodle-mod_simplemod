@@ -46,10 +46,10 @@ Edit the php.ini file and specify the location of the error log, this will help 
 ;error_log = php_errors.log
 ; Log errors to syslog (Event Log on Windows).
 ;error_log = syslog
-error_log = "f:/WAMP/php74tsx64/php.log"
+error_log = "f:/WAMP/php8tsx64/php.log"
 </pre>
 
-Where 'f:/WAMP/php74tsx64/php.log' is an example location.  Restart the web server service to take effect, i.e. 'Apache2.4' in 'Services'.
+Where 'f:/WAMP/php8tsx64/php.log' is an example location.  Restart the web server service to take effect, i.e. 'Apache2.4' in 'Services'.
 
 
 Rename these files:
@@ -111,6 +111,5 @@ Have fun developing for Moodle.  This activity module is an example from MoodleB
 
 https://www.moodlebites.com/mod/page/view.php?id=19542
 
-Richard Jones, richardnz@outlook.com
-Pirongia, NZ
-August 27th, 2020.
+Gareth Barnard
+18th May 2024.

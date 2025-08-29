@@ -113,7 +113,7 @@ class restore_simplemod_activity_task extends restore_activity_task {
 
         // Fix old wrong uses (missing extension).
         $rules[] = new restore_log_rule('simplemod', 'view all', 'index?id={course}', null,
-                                        null, null, 'index.php?id={course}');
+            null, null, 'index.php?id={course}');
         $rules[] = new restore_log_rule('simplemod', 'view all', 'index.php?id={course}', null);
 
         return $rules;
