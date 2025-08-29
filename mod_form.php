@@ -1,5 +1,5 @@
 <?php
-// This file is part of Moodle - http://moodle.org/
+// This file is part of Moodle - https://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -12,19 +12,19 @@
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+// along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
  * The main simplemod configuration form
  *
  * It uses the standard core Moodle formslib. For more info about them, please
- * visit: http://docs.moodle.org/en/Development:lib/formslib.php
+ * visit: https://docs.moodle.org/en/Development:lib/formslib.php
  *
- * @package    mod_simplemod
- * @copyright  2019 Richard Jones richardnz@outlook.com
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- * @see https://github.com/moodlehq/moodle-mod_simplemod
- * @see https://github.com/justinhunt/moodle-mod_simplemod */
+ * @package   mod_simplemod
+ * @copyright 2019 Richard Jones richardnz@outlook.com.
+ * @license   https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later.
+ * @see       https://github.com/moodlehq/moodle-mod_simplemod
+ * @see       https://github.com/justinhunt/moodle-mod_simplemod */
 
 defined('MOODLE_INTERNAL') || die();
 
@@ -33,9 +33,9 @@ require_once($CFG->dirroot.'/course/moodleform_mod.php');
 /**
  * Module instance settings form
  *
- * @package    mod_simplemod
- * @copyright  2019 Richard Jones richardnz@outlook.com
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package   mod_simplemod
+ * @copyright 2019 Richard Jones richardnz@outlook.com.
+ * @license   https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later.
  */
 class mod_simplemod_mod_form extends moodleform_mod {
 

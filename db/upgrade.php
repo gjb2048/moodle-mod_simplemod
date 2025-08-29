@@ -1,5 +1,5 @@
 <?php
-// This file is part of Moodle - http://moodle.org/
+// This file is part of Moodle - https://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -12,7 +12,7 @@
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+// along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
  * This file keeps track of upgrades to the simplemod module
@@ -24,11 +24,12 @@
  * it cannot do itself, it will tell you what you need to do.  The commands in
  * here will all be database-neutral, using the functions defined in DLL libraries.
  *
- * @package    mod_simplemod
- * @copyright  2019 Richard Jones richardnz@outlook.com
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- * @see https://github.com/moodlehq/moodle-mod_simplemod
- * @see https://github.com/justinhunt/moodle-mod_simplemod*/
+ * @package   mod_simplemod
+ * @copyright 2019 Richard Jones richardnz@outlook.com.
+ * @license   https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later.
+ * @see       https://github.com/moodlehq/moodle-mod_simplemod
+ * @see       https://github.com/justinhunt/moodle-mod_simplemod
+ */
 
 /**
  * Execute simplemod upgrade from the given old version

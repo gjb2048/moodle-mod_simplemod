@@ -41,7 +41,7 @@ Edit the php.ini file and specify the location of the error log, this will help 
 <pre>
 ; Log errors to specified file. PHP's default behavior is to leave this value
 ; empty.
-; http://php.net/error-log
+; https://php.net/error-log
 ; Example:
 ;error_log = php_errors.log
 ; Log errors to syslog (Event Log on Windows).
@@ -61,7 +61,7 @@ The lang/en/simplemod.php file should be renamed to the name of your new module.
 
 Replace simplemod with your new module name
 ========================================
-Carry out a search and replace for "simplemod" replacing it with the name of your new module.  You can do this in a number of ways depending on your text editor.  If you don't have one handy, download Brackets (http://brackets.io/) which is free, open source and handles this stuff well.
+Carry out a search and replace for "simplemod" replacing it with the name of your new module.  You can do this in a number of ways depending on your text editor.  If you don't have one handy, download Brackets (https://brackets.io/) which is free, open source and handles this stuff well.
 
 Navigate to your admin dashboard and install the new module.
 

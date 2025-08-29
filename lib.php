@@ -1,5 +1,5 @@
 <?php
-// This file is part of Moodle - http://moodle.org/
+// This file is part of Moodle - https://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -12,7 +12,7 @@
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+// along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
  * Library of interface functions and constants for module simplemod
@@ -24,14 +24,14 @@
  * logic, should go to locallib.php. This will help to save some memory when
  * Moodle is performing actions across all modules.
  *
- * @package    mod_simplemod
- * @copyright  2019 Richard Jones richardnz@outlook.com
- * @copyright  2022 G J Barnard - {@link http://moodle.org/user/profile.php?id=442195}.
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- * @see https://github.com/moodlehq/moodle-mod_simplemod
- * @see https://github.com/justinhunt/moodle-mod_simplemod
- * @see https://github.com/richardjonesnz/moodle-mod_simplemod
- * @see https://github.com/gjb2048/moodle-mod_simplemod
+ * @package   mod_simplemod
+ * @copyright 2019 Richard Jones richardnz@outlook.com.
+ * @copyright 2022 G J Barnard - {@link https://moodle.org/user/profile.php?id=442195}.
+ * @license   https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later.
+ * @see       https://github.com/moodlehq/moodle-mod_simplemod
+ * @see       https://github.com/justinhunt/moodle-mod_simplemod
+ * @see       https://github.com/richardjonesnz/moodle-mod_simplemod
+ * @see       https://github.com/gjb2048/moodle-mod_simplemod
  */
 
 /* Moodle core API */
@@ -41,8 +41,8 @@
  *
  * See {@link plugin_supports()} for more info.
  *
- * @param string $feature FEATURE_xx constant for requested feature
- * @return mixed true if the feature is supported, null if unknown
+ * @param string $feature FEATURE_xx constant for requested feature.
+ * @return mixed true if the feature is supported, null if unknown.
  */
 function simplemod_supports($feature) {
 
@@ -63,16 +63,16 @@ function simplemod_supports($feature) {
 }
 
 /**
- * Saves a new instance of the simplemod into the database
+ * Saves a new instance of the simplemod into the database.
  *
  * Given an object containing all the necessary data,
  * (defined by the form in mod_form.php) this function
  * will create a new instance and return the id number
  * of the new instance.
  *
- * @param stdClass $simplemod Submitted data from the form in mod_form.php
- * @param mod_simplemod_mod_form $mform The form instance itself (if needed)
- * @return int The id of the newly inserted simplemod record
+ * @param stdClass $simplemod Submitted data from the form in mod_form.php.
+ * @param mod_simplemod_mod_form $mform The form instance itself (if needed).
+ * @return int The id of the newly inserted simplemod record.
  */
 function simplemod_add_instance(stdClass $simplemod, ?mod_simplemod_mod_form $mform = null) {
     global $DB;
@@ -84,15 +84,15 @@ function simplemod_add_instance(stdClass $simplemod, ?mod_simplemod_mod_form $mf
 }
 
 /**
- * Updates an instance of the simplemod in the database
+ * Updates an instance of the simplemod in the database.
  *
  * Given an object containing all the necessary data,
  * (defined by the form in mod_form.php) this function
  * will update an existing instance with new data.
  *
- * @param stdClass $simplemod An object from the form in mod_form.php
- * @param mod_simplemod_mod_form $mform The form instance itself (if needed)
- * @return boolean Success/Fail
+ * @param stdClass $simplemod An object from the form in mod_form.php.
+ * @param mod_simplemod_mod_form $mform The form instance itself (if needed).
+ * @return boolean Success/Fail.
  */
 function simplemod_update_instance(stdClass $simplemod, ?mod_simplemod_mod_form $mform = null) {
     global $DB;
@@ -112,8 +112,8 @@ function simplemod_update_instance(stdClass $simplemod, ?mod_simplemod_mod_form 
  * only simplemod events belonging to the course specified are checked.
  * This is only required if the module is generating calendar events.
  *
- * @param int $courseid Course ID
- * @return bool
+ * @param int $courseid Course ID.
+ * @return bool.
  */
 function simplemod_refresh_events($courseid = 0) {
     global $DB;
@@ -141,20 +141,20 @@ function simplemod_refresh_events($courseid = 0) {
  * associated with the specified override.
  *
  * @param simplemod $simplemod the simplemod object.
- * @param object $override (optional) limit to a specific override
+ * @param object $override (optional) limit to a specific override.
  */
 function simplemod_update_events($simplemod, $override = null) {
 }
 
 /**
- * Removes an instance of the simplemod from the database
+ * Removes an instance of the simplemod from the database.
  *
  * Given an ID of an instance of this module,
  * this function will permanently delete the instance
  * and any data that depends on it.
  *
- * @param int $id Id of the module instance
- * @return boolean Success/Failure
+ * @param int $id Id of the module instance.
+ * @return boolean Success/Failure.
  */
 function simplemod_delete_instance($id) {
     global $DB;
@@ -174,14 +174,14 @@ function simplemod_delete_instance($id) {
  * user has done with a given particular instance of this module
  * Used for user activity reports.
  *
- * $return->time = the time they did it
- * $return->info = a short text description
+ * $return->time = the time they did it.
+ * $return->info = a short text description.
  *
- * @param stdClass $course The course record
- * @param stdClass $user The user record
- * @param cm_info|stdClass $mod The course module info object or record
- * @param stdClass $simplemod The simplemod instance record
- * @return stdClass|null
+ * @param stdClass $course The course record.
+ * @param stdClass $user The user record.
+ * @param cm_info|stdClass $mod The course module info object or record.
+ * @param stdClass $simplemod The simplemod instance record.
+ * @return stdClass|null.
  */
 function simplemod_user_outline($course, $user, $mod, $simplemod) {
 
@@ -197,10 +197,10 @@ function simplemod_user_outline($course, $user, $mod, $simplemod) {
  *
  * It is supposed to echo directly without returning a value.
  *
- * @param stdClass $course the current course record
- * @param stdClass $user the record of the user we are generating report for
- * @param cm_info $mod course module info
- * @param stdClass $simplemod the module instance record
+ * @param stdClass $course the current course record.
+ * @param stdClass $user the record of the user we are generating report for.
+ * @param cm_info $mod course module info.
+ * @param stdClass $simplemod the module instance record.
  */
 function simplemod_user_complete($course, $user, $mod, $simplemod) {
 }
@@ -209,17 +209,17 @@ function simplemod_user_complete($course, $user, $mod, $simplemod) {
  * Given a course and a time, this module should find recent activity
  * that has occurred in simplemod activities and print it out.
  *
- * @param stdClass $course The course record
- * @param bool $viewfullnames Should we display full names
- * @param int $timestart Print activity since this timestamp
- * @return boolean True if anything was printed, otherwise false
+ * @param stdClass $course The course record.
+ * @param bool $viewfullnames Should we display full names.
+ * @param int $timestart Print activity since this timestamp.
+ * @return boolean True if anything was printed, otherwise false.
  */
 function simplemod_print_recent_activity($course, $viewfullnames, $timestart) {
     return false;
 }
 
 /**
- * Prepares the recent activity data
+ * Prepares the recent activity data.
  *
  * This callback function is supposed to populate the passed array with
  * custom activity records. These records are then rendered into HTML via
@@ -227,50 +227,50 @@ function simplemod_print_recent_activity($course, $viewfullnames, $timestart) {
  *
  * Returns void, it adds items into $activities and increases $index.
  *
- * @param array $activities sequentially indexed array of objects with added 'cmid' property
- * @param int $index the index in the $activities to use for the next record
- * @param int $timestart append activity since this time
- * @param int $courseid the id of the course we produce the report for
- * @param int $cmid course module id
- * @param int $userid check for a particular user's activity only, defaults to 0 (all users)
- * @param int $groupid check for a particular group's activity only, defaults to 0 (all groups)
+ * @param array $activities sequentially indexed array of objects with added 'cmid' property.
+ * @param int $index the index in the $activities to use for the next record.
+ * @param int $timestart append activity since this time.
+ * @param int $courseid the id of the course we produce the report for.
+ * @param int $cmid course module id.
+ * @param int $userid check for a particular user's activity only, defaults to 0 (all users).
+ * @param int $groupid check for a particular group's activity only, defaults to 0 (all groups).
  */
 function simplemod_get_recent_mod_activity(&$activities, &$index, $timestart, $courseid, $cmid, $userid=0, $groupid=0) {
 }
 
 /**
- * Prints single activity item prepared by {@link simplemod_get_recent_mod_activity()}
+ * Prints single activity item prepared by {@link simplemod_get_recent_mod_activity()}.
  *
- * @param stdClass $activity activity record with added 'cmid' property
- * @param int $courseid the id of the course we produce the report for
- * @param bool $detail print detailed report
- * @param array $modnames as returned by {@link get_module_types_names()}
- * @param bool $viewfullnames display users' full names
+ * @param stdClass $activity activity record with added 'cmid' property.
+ * @param int $courseid the id of the course we produce the report for.
+ * @param bool $detail print detailed report.
+ * @param array $modnames as returned by {@link get_module_types_names()}.
+ * @param bool $viewfullnames display users' full names.
  */
 function simplemod_print_recent_mod_activity($activity, $courseid, $detail, $modnames, $viewfullnames) {
 }
 
 /**
- * Function to be run periodically according to the moodle cron
+ * Function to be run periodically according to the moodle cron.
  *
  * This function searches for things that need to be done, such
  * as sending out mail, toggling flags etc ...
  *
  * Note that this has been deprecated in favour of scheduled task API.
  *
- * @return boolean
+ * @return boolean.
  */
 function simplemod_cron () {
     return true;
 }
 
 /**
- * Returns all other caps used in the module
+ * Returns all other caps used in the module.
  *
  * For example, this could be array('moodle/site:accessallgroups') if the
  * module uses that capability.
  *
- * @return array
+ * @return array.
  */
 function simplemod_get_extra_capabilities() {
     return [];
@@ -283,9 +283,9 @@ function simplemod_get_extra_capabilities() {
  * This function returns if a scale is being used by one simplemod
  * if it has support for grading and scales.
  *
- * @param int $simplemodid ID of an instance of this module
- * @param int $scaleid ID of the scale
- * @return bool true if the scale is used by the given simplemod instance
+ * @param int $simplemodid ID of an instance of this module.
+ * @param int $scaleid ID of the scale.
+ * @return bool true if the scale is used by the given simplemod instance.
  */
 function simplemod_scale_used($simplemodid, $scaleid) {
     global $DB;
@@ -300,8 +300,8 @@ function simplemod_scale_used($simplemodid, $scaleid) {
  *
  * This is used to find out if scale used anywhere.
  *
- * @param int $scaleid ID of the scale
- * @return boolean true if the scale is used by any simplemod instance
+ * @param int $scaleid ID of the scale.
+ * @return boolean true if the scale is used by any simplemod instance.
  */
 function simplemod_scale_used_anywhere($scaleid) {
     global $DB;
@@ -312,12 +312,11 @@ function simplemod_scale_used_anywhere($scaleid) {
     }
 }
 /**
- * Creates or updates grade item for the given simplemod instance
+ * Creates or updates grade item for the given simplemod instance.
  *
  * Needed by {@link grade_update_mod_grades()}.
  *
- * @param stdClass $simplemod instance object with extra cmidnumber and modname property
- * @return void
+ * @param stdClass $simplemod instance object with extra cmidnumber and modname property.
  */
 function simplemod_grade_item_update(stdClass $simplemod) {
     global $CFG;
@@ -340,24 +339,24 @@ function simplemod_grade_item_update(stdClass $simplemod) {
         $simplemod->id, 0, null, $item);
 }
 /**
- * Delete grade item for given simplemod instance
+ * Delete grade item for given simplemod instance.
  *
- * @param stdClass $simplemod instance object
- * @return grade_item
+ * @param stdClass $simplemod instance object.
+ * @return grade_item.
  */
 function simplemod_grade_item_delete($simplemod) {
     global $CFG;
     require_once($CFG->libdir.'/gradelib.php');
     return grade_update('mod/simplemod', $simplemod->course, 'mod', 'simplemod',
-            $simplemod->id, 0, null, ['deleted' => 1]);
+        $simplemod->id, 0, null, ['deleted' => 1]);
 }
 /**
- * Update simplemod grades in the gradebook
+ * Update simplemod grades in the gradebook.
  *
  * Needed by {@link grade_update_mod_grades()}.
  *
- * @param stdClass $simplemod instance object with extra cmidnumber and modname property
- * @param int $userid update grade of specific user only, 0 means all participants
+ * @param stdClass $simplemod instance object with extra cmidnumber and modname property.
+ * @param int $userid update grade of specific user only, 0 means all participants.
  */
 function simplemod_update_grades(stdClass $simplemod, $userid = 0) {
     global $CFG, $DB;
@@ -370,53 +369,47 @@ function simplemod_update_grades(stdClass $simplemod, $userid = 0) {
 /* File API */
 
 /**
- * Returns the lists of all browsable file areas within the given module context
+ * Returns the lists of all browsable file areas within the given module context.
  *
  * The file area 'intro' for the activity introduction field is added automatically
- * by {@link file_browser::get_file_info_context_module()}
+ * by {@link file_browser::get_file_info_context_module()}.
  *
- * @param stdClass $course
- * @param stdClass $cm
- * @param stdClass $context
- * @return array of [(string)filearea] => (string)description
+ * @param stdClass $course.
+ * @param stdClass $cm.
+ * @param stdClass $context.
+ * @return array of [(string)filearea] => (string)description.
  */
 function simplemod_get_file_areas($course, $cm, $context) {
     return [];
 }
 
 /**
- * File browsing support for simplemod file areas
+ * File browsing support for simplemod file areas.
  *
- * @package mod_simplemod
- * @category files
- *
- * @param file_browser $browser
- * @param array $areas
- * @param stdClass $course
- * @param stdClass $cm
- * @param stdClass $context
- * @param string $filearea
- * @param int $itemid
- * @param string $filepath
- * @param string $filename
- * @return file_info instance or null if not found
+ * @param file_browser $browser.
+ * @param array $areas.
+ * @param stdClass $course.
+ * @param stdClass $cm.
+ * @param stdClass $context.
+ * @param string $filearea.
+ * @param int $itemid.
+ * @param string $filepath.
+ * @param string $filename.
+ * @return file_info instance or null if not found.
  */
 function simplemod_get_file_info($browser, $areas, $course, $cm, $context, $filearea, $itemid, $filepath, $filename) {
     return null;
 }
 
 /**
- * Serves the files from the simplemod file areas
+ * Serves the files from the simplemod file areas.
  *
- * @package mod_simplemod
- * @category files
- *
- * @param stdClass $course the course object
- * @param stdClass $cm the course module object
- * @param stdClass $context the simplemod's context
- * @param string $filearea the name of the file area
- * @param array $args extra arguments (itemid, path)
- * @param bool $forcedownload whether or not force download
+ * @param stdClass $course the course object.
+ * @param stdClass $cm the course module object.
+ * @param stdClass $context the simplemod's context.
+ * @param string $filearea the name of the file area.
+ * @param array $args extra arguments (itemid, path).
+ * @param bool $forcedownload whether or not force download.
  * @param array $options additional options affecting the file serving
  */
 function simplemod_pluginfile($course, $cm, $context, $filearea, array $args, $forcedownload, array $options=[]) {
@@ -434,27 +427,27 @@ function simplemod_pluginfile($course, $cm, $context, $filearea, array $args, $f
 /* Navigation API */
 
 /**
- * Extends the global navigation tree by adding simplemod nodes if there is a relevant content
+ * Extends the global navigation tree by adding simplemod nodes if there is a relevant content.
  *
  * This can be called by an AJAX request so do not rely on $PAGE as it might not be set up properly.
  *
- * @param navigation_node $navref An object representing the navigation tree node of the simplemod module instance
- * @param stdClass $course current course record
- * @param stdClass $module current simplemod instance record
- * @param cm_info $cm course module information
+ * @param navigation_node $navref An object representing the navigation tree node of the simplemod module instance.
+ * @param stdClass $course current course record.
+ * @param stdClass $module current simplemod instance record.
+ * @param cm_info $cm course module information.
  */
 function simplemod_extend_navigation(navigation_node $navref, stdClass $course, stdClass $module, cm_info $cm) {
     // Todo: Delete this function and its docblock, or implement it.
 }
 
 /**
- * Extends the settings navigation with the simplemod settings
+ * Extends the settings navigation with the simplemod settings.
  *
  * This function is called when the context for the page is a simplemod module. This is not called by AJAX
  * so it is safe to rely on the $PAGE.
  *
- * @param settings_navigation $settingsnav complete settings navigation tree
- * @param navigation_node $simplemodnode simplemod administration node
+ * @param settings_navigation $settingsnav complete settings navigation tree.
+ * @param navigation_node $simplemodnode simplemod administration node.
  */
 function simplemod_extend_settings_navigation(settings_navigation $settingsnav, ?navigation_node $simplemodnode=null) {
     // Todo: Delete this function and its docblock, or implement it.
