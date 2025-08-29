@@ -17,11 +17,11 @@
 /**
  * Simple debugging class
  *
- * @package    mod_simplemod
- * @copyright  2019 Richard Jones richardnz@outlook.com.
- * @copyright  2021 G J Barnard.
- * @author     G J Barnard - {@link https://moodle.org/user/profile.php?id=442195}.
- * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later.
+ * @package   mod_simplemod
+ * @copyright 2019 Richard Jones richardnz@outlook.com.
+ * @copyright 2021 G J Barnard.
+ * @author    G J Barnard - {@link https://moodle.org/user/profile.php?id=442195}.
+ * @license   https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later.
  */
 
 namespace mod_simplemod\local;

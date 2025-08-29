@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Prints a list of module instances
+ * Prints a list of module instances.
  *
  * @package   mod_simplemod
  * @copyright 2019 Richard Jones richardnz@outlook.com.
