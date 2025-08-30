@@ -48,7 +48,7 @@ echo $OUTPUT->header();
 echo $OUTPUT->heading($strname);
 
 if (!$simplemods = get_all_instances_in_course('simplemod', $course)) {
-    notice(get_string('nosimplemods', 'simplemod'), new moodle_url('/course/view.php', ['id' => $course->id]));
+    notice(get_string('nosimplemods', 'simplemod'), new core\url('/course/view.php', ['id' => $course->id]));
 }
 
 $usesections = course_format_uses_sections($course->format);
@@ -83,7 +83,7 @@ foreach ($modinfo->instances['simplemod'] as $cm) {
 
     $class = $cm->visible ? null : ['class' => 'dimmed'];
 
-    $row[] = html_writer::link(new moodle_url('view.php', ['id' => $cm->id]),
+    $row[] = html_writer::link(new core\url('view.php', ['id' => $cm->id]),
         $cm->get_formatted_name(), $class);
     $table->data[] = $row;
 }
